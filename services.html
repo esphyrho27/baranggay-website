@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Services | Barangay Puntod</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body data-page="services">
+    <div id="header">
+    </div>
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <h1>Services & Contact</h1>
+          <p>Start with the right requirements and connect with your Barangay Hall.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Barangay services</h2>
+            <p>Requirements and fees may change. Confirm all details before visiting.</p>
+          </div>
+          <div class="grid" id="services-grid">
+          </div>
+        </div>
+      </section>
+      <section class="section alt" id="contact">
+        <div class="container contact-grid">
+          <div class="contact-panel">
+            <h2>Visit or contact us</h2>
+            <p>
+              <strong>Office hours</strong>
+              <br>Monday–Friday, 8:00 AM–5:00 PM<br>
+              <small>Verify holidays and break arrangements.</small>
+            </p>
+            <p>
+              <strong>Address</strong>
+              <br>Barangay Puntod, Cagayan de Oro City, 9000</p>
+              <p>
+                <strong>Phone · Email · Facebook</strong>
+                <br>Replace with verified official channels.</p>
+                <h3>Emergency hotlines</h3>
+                <p>National Emergency: <strong>911</strong>
+                <br>Verify local rescue contacts with city authorities.</p>
+                <iframe class="map" title="Map of Puntod" loading="lazy" src="https://www.google.com/maps?q=Barangay%20Puntod%2C%20Cagayan%20de%20Oro&output=embed">
+                </iframe>
+              </div>
+              <form class="form contact-form">
+                <h2>Send an inquiry</h2>
+                <label for="name">Full name</label>
+                <input id="name" required>
+                <label for="email">Email address</label>
+                <input id="email" type="email" required>
+                <label for="subject">Subject</label>
+                <input id="subject" required>
+                <label for="message">Message</label>
+                <textarea id="message" required>
+                </textarea>
+                <button class="btn blue" type="submit">Send message</button>
+                <p class="notice">Thank you! This demo did not send data to a server.</p>
+              </form>
+            </div>
+          </section>
+          <section class="section">
+            <div class="container">
+              <div class="section-head">
+                <h2>Frequently asked questions</h2>
+              </div>
+              <div class="faq" id="faq">
+              </div>
+            </div>
+          </section>
+        </main>
+        <div id="shared-footer">
+        </div>
+        <script src="js/shared.js">
+        </script>
+        <script>const s=[['Barangay Clearance','For employment, identification, or other lawful purposes.'],['Certificate of Residency','Confirms residence within Barangay Puntod.'],['Business Clearance','Local clearance for businesses operating in the barangay.'],['Indigency Certificate','Supports qualified residents requesting assistance.'],['Community Assistance','Referrals and support for eligible residents and families.'],['Health Services','Basic community health support and referrals.']];document.querySelector('#services-grid').innerHTML=s.map((x,i)=>`<article class="card service-card">
+        <div class="icon">${['✓','⌂','▤','♡','☏','✚'][i]}</div>
+        <h3>${x[0]}</h3>
+        <p>${x[1]}</p>
+        <ol class="steps">
+          <li>Bring a valid ID and supporting documents.</li>
+          <li>Complete the application.</li>
+          <li>Wait for assessment and release.</li>
+        </ol>
+      </article>`).join('');const q=[['How can I get a Barangay Clearance?','Visit the Barangay Hall with a valid ID and proof of residency. Confirm fees before your visit.'],['What are the office hours?','The draft schedule is Monday to Friday, 8:00 AM to 5:00 PM.'],['How do I contact the barangay?','Use the verified official channels once added to this website.'],['Where is Barangay Puntod located?','It is in Cagayan de Oro City, Northern Mindanao.'],['What services are available?','Clearances, certificates, community assistance, and health support.']];document.querySelector('#faq').innerHTML=q.map(x=>`<article class="faq-item">
+      <button class="faq-question" aria-expanded="false">${x[0]}<span>＋</span>
+    </button>
+    <div class="faq-answer">
+      <p>${x[1]}</p>
+    </div>
+  </article>`).join('')</script>
+  <script src="js/script.js">
+  </script>
+</body>
+</html>

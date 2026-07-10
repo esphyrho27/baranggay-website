@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Officials | Barangay Puntod</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body data-page="officials">
+    <div id="header">
+    </div>
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <h1>Barangay Officials</h1>
+          <p>The public servants supporting responsive, accountable, and people-centered governance.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Meet your local leaders</h2>
+           
+          </div>
+          <div class="grid four" id="official-grid">
+          </div>
+        </div>
+      </section>
+      <section class="section alt">
+        <div class="container">
+          <div class="section-head">
+            <h2>Organizational chart</h2>
+    
+          </div>
+          <div class="org-chart">
+            <div class="org-node">Barangay Captain</div>
+            <div class="org-row">
+              <div class="org-node">Barangay Council</div>
+              <div class="org-node">Barangay Secretary</div>
+              <div class="org-node">Barangay Treasurer</div>
+            </div>
+            <div class="org-row">
+              <div class="org-node">SK Council</div>
+              <div class="org-node">Barangay Health Workers</div>
+              <div class="org-node">Lupon & Committees</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div id="shared-footer">
+    </div>
+    <script src="js/shared.js">
+    </script>
+  <script>
+const officials = [
+  {
+    name: "Alexis Dacer",
+    role: "Barangay Captain",
+    image: "images/dacer.jpg"
+  },
+  {
+    name: "Ching Abbu",
+    role: "Baranggay Kagawad",
+    image: "images/abbu.jpg"
+  },
+  {
+    name: "Dongkoy Abot",
+    role: "Baranggay Kagawad",
+    image: "images/abot.jpg"
+  },
+  {
+    name: "Rodel Zureta",
+    role: "Baranggay Kagawad",
+    image: "images/zurita.jpg"
+  },
+  
+  
+];
+
+document.querySelector('#official-grid').innerHTML = officials.map(person => `
+  <article class="card official">
+    <img class="portrait" src="${person.image}" alt="${person.name}">
+    <div class="card-body">
+      <h3>${person.name}</h3>
+      <strong>${person.role}</strong>
+      <p>Committed to accessible public service and community development.</p>
+    </div>
+  </article>
+`).join('');
+</script>
+  <script src="js/script.js">
+  </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Gallery | Barangay Puntod</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body data-page="gallery">
+    <div id="header">
+    </div>
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <h1>Community Gallery</h1>
+          <p>Moments of participation, celebration, service, and progress.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Life in our barangay</h2>
+            
+          </div>
+          <div class="gallery" id="gallery">
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="lightbox" role="dialog" aria-modal="true">
+      <button aria-label="Close">×</button>
+      <img alt="">
+    </div>
+    <div id="shared-footer">
+    </div>
+    <script src="js/shared.js">
+    </script>
+
+<div id="gallery" class="gallery"></div>
+<script>
+const g = [
+  ['Community Festival', 'images/fest.jpg'],
+  ['Youth Sports', 'images/youth.jpg'],
+  ['Clean-up Drive', 'images/cleanup.jpg'],
+  ['Health Program', 'images/health.jpg'],
+  ['Community Assembly', 'images/comas.jpg'],
+  ['Tree Planting', 'images/tree.jpg'],
+  ['Livelihood Fair', 'images/livelihood.jpg'],
+  ['Preparedness', 'images/prep.jpg'],
+  ['Senior Program', 'images/sc.jpg']
+];
+
+document.querySelector('#gallery').innerHTML = g.map(x => `
+  <figure class="gallery-item">
+    <img src="${x[1]}" alt="${x[0]}">
+    <figcaption>${x[0]}</figcaption>
+  </figure>
+`).join('');
+</script>
+
+  <script src="js/script.js">
+  </script>
+</body>
+</html>
